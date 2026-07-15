@@ -1,0 +1,38 @@
+# ==============================================================================
+# FRONTEND (React / Vite / Node)
+# ==============================================================================
+# Ignora os módulos e builds dentro da pasta frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# Logs do npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================================================================
+# BACKEND (Python / Flask)
+# ==============================================================================
+# Ignora as pastas de ambiente virtual no backend (venv ou .env)
+backend/venv/
+backend/.venv/
+backend/env/
+backend/ENV/
+
+# Ignora o arquivo de configuração com a sua chave de API (MUITO IMPORTANTE!)
+backend/.env
+
+# Ignora arquivos temporários e compilados do Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# ==============================================================================
+# SISTEMA OPERACIONAL & VS CODE (Geral)
+# ==============================================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

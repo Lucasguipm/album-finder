@@ -1,0 +1,73 @@
+/* Barra de Busca Superior */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  
+}
+
+.search-bar-container img {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.search-bar-container img:hover {
+    transform: scale(1.2);
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 400px;
+    height: 44px;
+    margin: 0 10px 0 10px;
+    padding: 0px 20px;
+    border-radius: 22px;
+    border: 1px solid #D51007;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    box-sizing: border-box;
+
+    font-size: larger;
+
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+input:hover {
+  color: #fff;
+  transform: scale(1.04);
+}
+
+
+button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #D51007;
+    background-color: #222; 
+    color: #707070;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+button:hover {
+  color: #fff;
+  transform: scale(1.2);
+}

@@ -1,0 +1,54 @@
+
+.artist-image-container img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+.artist-bio-container .no-image {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.artist-bio-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+.artist-bio-container::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+.artist-bio-container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+
+    margin-top: 15px;  
+    margin-bottom: 15px;
+}
+
+.artist-bio-container::-webkit-scrollbar-thumb {
+    background: #d51007;
+
+    border: 3px solid transparent;
+    background-clip: padding-box; 
+    border-radius: 10px;
+    transition: background 0.5s;
+}
+
+.artist-bio-container::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0;
+    
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}

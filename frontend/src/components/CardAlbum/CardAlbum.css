@@ -1,0 +1,108 @@
+.album-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    
+    background-color: black;
+    border: 1px solid #d51007;
+    height: 70vh;
+    padding: 20px;
+    border-radius: 12px;
+
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+@media (min-width: 1800px) {
+  .album-card {
+    height: 60vh;
+  }
+  
+}
+
+.album-card:hover {
+    transform: scale(1.02);
+}
+
+.album-card .album-cover {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+
+.album-card h1 {
+    display: flex;
+    align-items: top;
+    justify-content: start;
+
+    max-height: 94px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    font-size: 2.1rem;
+}
+
+
+h1::-webkit-scrollbar {
+  width: 10px;
+}
+
+h1::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+
+  margin-top: 15px;  
+  margin-bottom: 15px;
+}
+
+h1::-webkit-scrollbar-thumb {
+  background: #d51007;
+
+  border: 3px solid transparent;
+  background-clip: padding-box; 
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+
+h1::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0;
+    
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.album-card a {
+    background-color: #d51007;
+    color: #fff;
+    height: 50px;
+    border-radius: 25px;
+    /* border: 1px solid black; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.album-card a:hover {
+    transform: translateY(-3px);
+}
+
+.lastfm-btn img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.lastfm-btn .sound-img{
+    height: 50px;
+    margin-right: 5px;
+}
+
+.lastfm-btn .last-logo {
+    height: 20px;
+    margin-left: 5px;
+}

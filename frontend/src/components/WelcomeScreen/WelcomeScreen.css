@@ -1,0 +1,39 @@
+.welcome-screen {
+    background-image:
+        linear-gradient(rgba(18, 18, 18, 0.35), rgba(18, 18, 18, 0.35)), 
+        url('../../assets/heart-performing.jpg');
+    background-size: cover;
+    background-position:top ;
+    background-repeat: no-repeat;
+    
+    height: 84vh;
+    border-radius: 12px;
+    border: 1px solid #d51007;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.welcome-screen h1 {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    font-size: 2.5em;
+}
+
+.welcome-screen img {
+    width: 170px;
+    height: auto;
+    object-fit: cover;
+
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.welcome-screen img:hover {
+    transform: scale(1.5);
+}

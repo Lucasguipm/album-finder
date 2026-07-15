@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Principal */
+.app-container {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+
+  padding: 20px 20px 30px 20px;
+  box-sizing: border-box;
+}
+
+
+/* === DIVISÃO EM DUAS COLUNAS === */
+.results-layout {
+  display: grid;
+  grid-template-columns: 450px 1fr; /* Coluna da esquerda fixa, direita ocupa o resto */
+  gap: 30px;
+  align-items: start;  
+
+  /* Dizemos para rodar a animação 'aparecerSuave' que criaremos abaixo, ao longo de 0.6 segundos, de forma fluida (ease-out) e apenas uma vez. */
+  /* animation: aparecerSuave 0.6s ease-out forwards; */
+  
+  /* Definimos o estado inicial de opacidade para 0 (invisível) para que ela comece invisível antes de animar. */
+  opacity: 1;
+}
+
+@keyframes aparecerSuave {
+  from {
+    /* Estado inicial: totalmentes invisível e 20px abaixo */
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    /* Estado final: totalmente visível na posição original */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Painel da Esquerda (Imagem + Bio) */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  height: 120vh;
+
+  animation: aparecerSuave 0.5s ease-out forwards;
+  opacity: 0; /* Começa invisível */
+}
+
+
+/* Painel da Direita (Grid de Álbuns) */
+.right-panel {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  
+  height: 120vh;     
+  overflow-y: auto;
+
+  /* Adicionamos uma 'animation-delay' de 0.2 segundos. Isso faz com que o painel direito comece a animar logo APÓS o esquerdo, criando um efeito em cascata muito bonito. */
+  animation: aparecerSuave 0.5s ease-out 0.2s forwards;
+  opacity: 0; /* Começa invisível */
+}
+
+.right-panel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.right-panel::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+
+  margin-top: 15px;  
+  margin-bottom: 15px;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+  background: #d51007;
+
+  border: 3px solid transparent;
+  background-clip: padding-box; 
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+
+.right-panel::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0;
+    
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
