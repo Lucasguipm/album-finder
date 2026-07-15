@@ -26,7 +26,7 @@ function App() {
 
     try {
       // Faz a chamada para o seu servidor Flask usando o Axios
-      const response = await axios.get("http://127.0.0.1:5000/api/albums", {
+      const response = await axios.get("https://album-finder-ppd5.onrender.com/api/albums", {
         params: { artist: searchQuery }
       });
 
